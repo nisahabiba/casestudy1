@@ -37,6 +37,19 @@ class Event {
   List<int> november = List<int>.filled(29, 0, growable: true);
   List<int> december = List<int>.filled(30, 0, growable: true);
 
+  List<int> januaryB = List<int>.filled(30, 0, growable: true);
+  List<int> februaryB = List<int>.filled(27, 0, growable: true);
+  List<int> marchB = List<int>.filled(30, 0, growable: true);
+  List<int> aprilB = List<int>.filled(29, 0, growable: true);
+  List<int> mayB = List<int>.filled(30, 0, growable: true);
+  List<int> juneB = List<int>.filled(29, 0, growable: true);
+  List<int> julyB = List<int>.filled(30, 0, growable: true);
+  List<int> augustB = List<int>.filled(30, 0, growable: true);
+  List<int> septemberB = List<int>.filled(29, 0, growable: true);
+  List<int> octoberB = List<int>.filled(30, 0, growable: true);
+  List<int> novemberB = List<int>.filled(29, 0, growable: true);
+  List<int> decemberB = List<int>.filled(30, 0, growable: true);
+
   // Creating a Field/Property
   dynamic month;
   dynamic date;
@@ -61,7 +74,6 @@ class Event {
     dynamic monthInput;
     dynamic inputEventName;
     dynamic inputTime;
-    dynamic inputVenue;
 
     stdout.write("Event name : ");
     inputEventName = stdin.readLineSync();
@@ -76,7 +88,7 @@ class Event {
     for (int i = 0; i < 12; i++) {
       if (monthInput < 13) {
         dynamic value = daysPerMonth["$monthInput"];
-        //print(value);
+
         dynamic inputDate;
         stdout.write("Input Date : ");
         inputDate = stdin.readLineSync();
@@ -113,206 +125,471 @@ class Event {
     switch (month) {
       case 1:
         {
+          dynamic vanue;
           int fill = january.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            january.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$january\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = januaryB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              january.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$january\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+              break;
+            }
           }
+
+          if (vanue == 'B' || vanue == 'b') {
+            if (fil == 0) {
+              januaryB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$januaryB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            }
+          } else {
+            print("Full");
+          }
+          break;
         }
 
       case 2:
         {
+          dynamic vanue;
           int fill = february.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            february.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$february\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = februaryB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              february.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$february\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+              break;
+            }
+          }
+
+          if (vanue == 'B' || vanue == 'b') {
+            if (fil == 0) {
+              februaryB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$februaryB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+            }
           }
         }
+        break;
 
       case 3:
         {
+          dynamic vanue;
           int fill = march.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            march.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$march\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = marchB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              march.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$march\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+              break;
+            }
           }
+          if (vanue == 'B' || vanue == 'b') {
+            if (fill == 0) {
+              marchB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$marchB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+            }
+          }
+          break;
         }
 
       case 4:
         {
+          dynamic vanue;
           int fill = april.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            april.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$april\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = aprilB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              april.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$april\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+              break;
+            }
           }
+
+          if (vanue == 'B' || vanue == 'b') {
+            if (fil == 0) {
+              aprilB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$aprilB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+            }
+          }
+          break;
         }
 
       case 5:
         {
+          dynamic vanue;
           int fill = may.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
+          int fil = mayB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              may.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$may\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+              break;
+            }
+          }
+
+          if (vanue == 'B' || vanue == 'b') {
+            if (fill == 0) {
+              mayB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$mayB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            }
           } else {
-            may.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$may\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
             break;
           }
         }
+        break;
 
       case 6:
         {
+          dynamic vanue;
           int fill = june.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            june.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$june\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = juneB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              june.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$june\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+              break;
+            }
           }
+
+          if (vanue == 'B' || vanue == 'b') {
+            if (fil == 0) {
+              juneB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$juneB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            }
+          } else {}
+          break;
         }
 
       case 7:
         {
+          dynamic vanue;
           int fill = july.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            july.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$july\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = julyB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              july.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$july\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+            }
           }
+          if (vanue == 'B' || vanue == 'b') {
+            if (fil == 0) {
+              julyB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$julyB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            }
+          } else {
+            print("Full");
+          }
+          break;
         }
 
       case 8:
         {
+          dynamic vanue;
           int fill = august.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            august.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$august\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = augustB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              august.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$august\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+            }
           }
+
+          if (vanue == 'B' || vanue == 'b') {
+            if (fil == 0) {
+              augustB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$augustB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            }
+          } else {
+            print("Full");
+          }
+          break;
         }
 
       case 9:
         {
+          dynamic vanue;
           int fill = september.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            september.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$september\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = septemberB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              september.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$september\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+            }
           }
+
+          if (vanue == 'B' || vanue == 'b') {
+            if (fil == 0) {
+              septemberB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$septemberB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            }
+          } else {
+            print("Full");
+          }
+          break;
         }
 
       case 10:
         {
+          dynamic vanue;
           int fill = october.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            october.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$october\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = octoberB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              october.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$october\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+            }
           }
+
+          if (vanue == 'B' || vanue == 'b') {
+            if (fil == 0) {
+              octoberB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$octoberB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            }
+          } else {
+            print("Full");
+          }
+          break;
         }
 
       case 11:
         {
+          dynamic vanue;
           int fill = november.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            november.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$november\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = novemberB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              november.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$november\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+            }
           }
+          if (vanue == 'B' || vanue == 'b') {
+            if (fil == 0) {
+              novemberB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$novemberB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            }
+          } else {
+            print("Full");
+          }
+          break;
         }
 
       case 12:
         {
+          dynamic vanue;
           int fill = december.elementAt(date - 1);
-          if (fill == 1) {
-            print("The date is unavailable.");
-            break;
-          } else {
-            december.insert(date - 1, 1);
-            print(
-                "\nAvailability (1 means assigned, 0 means available) : \n$december\n");
-            print(
-                "Your event named $eventName is successfully assigned to $date/$month/2022 on $time");
-            print("${daysPerMonth["$monthInput"]} days left this month.\n");
-            break;
+          int fil = decemberB.elementAt(date - 1);
+          stdout.write("Enter vanue (A / B): ");
+          vanue = stdin.readLineSync();
+          if (vanue == 'A' || vanue == 'a') {
+            if (fill == 0) {
+              december.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$december\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue A on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            } else {
+              print("Full");
+            }
           }
+
+          if (vanue == 'B' || vanue == 'b') {
+            if (fil == 0) {
+              decemberB.insert(date - 1, 1);
+
+              print(
+                  "\nAvailability (1 means assigned, 0 means available) : \n$decemberB\n");
+              print(
+                  "Your event named $eventName is successfully assigned to $date/$month/2022 in Vanue B on $time");
+              print("${daysPerMonth["$monthInput"]} days left this month.\n");
+              break;
+            }
+          } else {
+            print("Full");
+          }
+          break;
         }
 
       default:
