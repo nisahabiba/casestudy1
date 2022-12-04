@@ -1,5 +1,6 @@
 import 'dart:io';
 
+//Nisa Habiba (1918172)
 void main() {
   stdout.write("EVENT MANAGEMENT SYSTEM\n");
 
@@ -24,6 +25,7 @@ class Event {
     "12": 31,
   };
 
+  //Nisa Habiba (1918172)
   List<int> january = List<int>.filled(30, 0, growable: true);
   List<int> february = List<int>.filled(27, 0, growable: true);
   List<int> march = List<int>.filled(30, 0, growable: true);
@@ -98,13 +100,14 @@ class Event {
     }
   }
 
-  //Abdurrahman Ali Bawazir 1828549 & Nisa Habiba 
+  //Abdurrahman Ali Bawazir 1828549 & Nisa Habiba 1918172
   
   void eventDate(var monthInput, inputDate, value) {
     int month = monthInput;
     dynamic date = inputDate;
     dynamic restOfDate = value;
-
+    
+  //Nisa Habiba (1918172)
     switch (month) {
       case 1:
         {
@@ -207,6 +210,7 @@ class Event {
     print("Your event is successfully assigned to $date/$month/2022.");
     print("${daysPerMonth["$monthInput"]} days left this month.");
 
+    //Abdurrahman Ali Bawazir 1828549
     print("Do you want to schedule another event? (Y/N)");
     var repeat = stdin.readLineSync();
     if (repeat == "Y" || repeat == "y") {
