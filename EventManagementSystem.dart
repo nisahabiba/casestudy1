@@ -7,6 +7,7 @@ void main() {
   even.eventMonth();
 }
 
+//Abdurrahman Ali Bawazir (1828549)
 class Event {
   Map<String, int> daysPerMonth = {
     "1": 31,
@@ -56,6 +57,8 @@ class Event {
     month = getMonth;
   }
 
+  //Abdurrahman Ali Bawazir 1828549
+  
   void eventMonth() {
     dynamic monthInput;
     dynamic inputEventName;
@@ -95,6 +98,8 @@ class Event {
     }
   }
 
+  //Abdurrahman Ali Bawazir 1828549 & Nisa Habiba 
+  
   void eventDate(var monthInput, inputDate, value) {
     int month = monthInput;
     dynamic date = inputDate;
