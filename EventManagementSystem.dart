@@ -1,15 +1,14 @@
 import 'dart:io';
 
-//Nisa Habiba (1918172)
 void main() {
-  stdout.write("EVENT MANAGEMENT SYSTEM\n");
+  print("\n-------------------------------------------- \n");     //Nisa Habiba (1918172)
+  stdout.write("EVENT MANAGEMENT SYSTEM\n\n");
 
   var even = new Event();
   even.eventMonth();
 }
 
-//Abdurrahman Ali Bawazir (1828549)
-class Event {
+class Event {                                                     //Abdurrahman Ali Bawazir (1828549)
   Map<String, int> daysPerMonth = {
     "1": 31,
     "2": 28,
@@ -25,8 +24,7 @@ class Event {
     "12": 31,
   };
 
-  //Nisa Habiba (1918172)
-  List<int> january = List<int>.filled(30, 0, growable: true);
+  List<int> january = List<int>.filled(30, 0, growable: true);      //Nisa Habiba (1918172)
   List<int> february = List<int>.filled(27, 0, growable: true);
   List<int> march = List<int>.filled(30, 0, growable: true);
   List<int> april = List<int>.filled(29, 0, growable: true);
@@ -39,7 +37,7 @@ class Event {
   List<int> november = List<int>.filled(29, 0, growable: true);
   List<int> december = List<int>.filled(30, 0, growable: true);
 
-  // Creating a Field/Property
+  // Creating a Field/Property                                      //Abdurrahman Ali Bawazir (1828549)
   dynamic month;
   dynamic date;
 
@@ -59,9 +57,7 @@ class Event {
     month = getMonth;
   }
 
-  //Abdurrahman Ali Bawazir 1828549
-  
-  void eventMonth() {
+  void eventMonth() {                                             //Abdurrahman Ali Bawazir (1828549)
     dynamic monthInput;
     dynamic inputEventName;
     stdout.write("Event name : ");
@@ -82,7 +78,7 @@ class Event {
           if (inputDate < value) {
             daysPerMonth.update('$monthInput', (value) => value - 1);
             //print(daysPerMonth["$monthInput"]);
-            eventDate(monthInput, inputDate, value);
+            eventDate(monthInput, inputDate, inputEventName);
             break;
           } else {
             stdout.write("Your chosen date is invalid. \nInput Date again:");
@@ -100,14 +96,11 @@ class Event {
     }
   }
 
-  //Abdurrahman Ali Bawazir 1828549 & Nisa Habiba 1918172
-  
-  void eventDate(var monthInput, inputDate, value) {
+  void eventDate(var monthInput, inputDate, inputEventName) {           //Nisa Habiba (1918172) & Abdurrahman Ali Bawazir (1828549)
     int month = monthInput;
     dynamic date = inputDate;
-    dynamic restOfDate = value;
-    
-  //Nisa Habiba (1918172)
+    dynamic eventName = inputEventName;
+
     switch (month) {
       case 1:
         {
@@ -118,87 +111,164 @@ class Event {
           } else {
             january.insert(date - 1, 1);
             print(
-                "\nAvailability (1 means assigned, o means available) : \n$january\n");
+                "\nAvailability (1 means assigned, 0 means available) : \n$january\n");
             break;
           }
         }
 
       case 2:
         {
-          february.insert(date - 1, 1);
-          print(february);
+          int fill = february.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            february.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$february\n");
+            break;
+          }
         }
-        break;
 
       case 3:
         {
-          march.insert(date - 1, 1);
-          print(march);
+          int fill = march.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            march.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$march\n");
+            break;
+          }
         }
-        break;
 
       case 4:
         {
-          april.insert(date - 1, 1);
-          print(april);
+          int fill = april.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            april.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$april\n");
+            break;
+          }
         }
-        break;
 
       case 5:
         {
-          may.insert(date - 1, 1);
-          print(may);
+          int fill = may.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            may.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$may\n");
+            break;
+          }
         }
-        break;
 
       case 6:
         {
-          june.insert(date - 1, 1);
-          print(june);
+          int fill = june.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            june.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$june\n");
+            break;
+          }
         }
-        break;
 
       case 7:
         {
-          july.insert(date - 1, 1);
-          print(july);
+          int fill = july.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            july.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$july\n");
+            break;
+          }
         }
-        break;
 
       case 8:
         {
-          august.insert(date - 1, 1);
-          print(august);
+          int fill = august.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            august.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$august\n");
+            break;
+          }
         }
-        break;
 
       case 9:
         {
-          september.insert(date - 1, 1);
-          print(september);
+          int fill = september.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            september.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$september\n");
+            break;
+          }
         }
-        break;
 
       case 10:
         {
-          october.insert(date - 1, 1);
-          print(october);
+          int fill = october.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            october.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$october\n");
+            break;
+          }
         }
-        break;
 
       case 11:
         {
-          november.insert(date - 1, 1);
-          print(november);
+          int fill = november.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            november.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$november\n");
+            break;
+          }
         }
-        break;
 
       case 12:
         {
-          december.insert(date - 1, 1);
-          print(december);
+          int fill = december.elementAt(date - 1);
+          if (fill == 1) {
+            print("unavailable.");
+            break;
+          } else {
+            december.insert(date - 1, 1);
+            print(
+                "\nAvailability (1 means assigned, 0 means available) : \n$december\n");
+            break;
+          }
         }
-        break;
 
       default:
         {
@@ -207,12 +277,13 @@ class Event {
         break;
     }
 
-    print("Your event is successfully assigned to $date/$month/2022.");
-    print("${daysPerMonth["$monthInput"]} days left this month.");
+    print(
+        "Your event named $eventName is successfully assigned to $date/$month/2022.");
+    print("${daysPerMonth["$monthInput"]} days left this month.\n");
 
-    //Abdurrahman Ali Bawazir 1828549
     print("Do you want to schedule another event? (Y/N)");
     var repeat = stdin.readLineSync();
+    print("\n");
     if (repeat == "Y" || repeat == "y") {
       return eventMonth();
     } else if (repeat == "N" || repeat == "n") {
@@ -221,5 +292,4 @@ class Event {
       print("Invalid. Thankyou for scheduling your event with us.");
     }
   }
-  
 }
