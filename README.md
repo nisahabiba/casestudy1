@@ -13,4 +13,5 @@ Assigned Task :
 5. Create method eventDate (Abdu & Nisa)
 
 Brief description :
-This case study is about event management system where user can schedule certain event on specific date and month. User can not schedule more than one event on the same day.
+This case study is about event management system where user can schedule events on specific date and month of a year (based on 2022).
+User can not schedule more than one event on the same day or the program will ask user to assign another date and month.
