@@ -7,9 +7,9 @@ void main() {
   var even = new Event();
   even.eventMonth();
 }
-
+//Nisa Habiba 1918172
 class Event {
-  Map<String, int> daysPerMonth = {
+  Map<String, int> daysPerMonth = {             
     "1": 31,
     "2": 28,
     "3": 31,
@@ -24,6 +24,7 @@ class Event {
     "12": 31,
   };
 
+  //Nisa Habiba 1918172
   List<int> january = List<int>.filled(30, 0, growable: true);
   List<int> february = List<int>.filled(27, 0, growable: true);
   List<int> march = List<int>.filled(30, 0, growable: true);
@@ -37,6 +38,7 @@ class Event {
   List<int> november = List<int>.filled(29, 0, growable: true);
   List<int> december = List<int>.filled(30, 0, growable: true);
 
+  //Abdurrahman Ali Bawazir 1828549
   List<int> januaryB = List<int>.filled(30, 0, growable: true);
   List<int> februaryB = List<int>.filled(27, 0, growable: true);
   List<int> marchB = List<int>.filled(30, 0, growable: true);
@@ -69,7 +71,7 @@ class Event {
   set setName(dynamic getMonth) {
     month = getMonth;
   }
-
+//Abdurrahman Ali Bawazir 1828549
   void eventMonth() {
     dynamic monthInput;
     dynamic inputEventName;
@@ -121,7 +123,7 @@ class Event {
     dynamic date = inputDate;
     dynamic eventName = inputEventName;
     dynamic time = inputTime;
-
+//Abdurrahman Ali Bawazir 1828549 & Nisa Habiba 1918172
     switch (month) {
       case 1:
         {
